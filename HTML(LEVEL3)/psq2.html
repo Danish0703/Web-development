@@ -6,28 +6,27 @@
     <title>HTML L3</title>
 </head>
 <body>
-    <h3><i><b>Registrration form</b></i></h3>
-    <form action="/action"></form> 
-    <div>
-        <label for="text">Please enter your name</label>
-        <input type="text" placeholder="First Name" name="Fname"/>
-        <input type="text" placeholder="Last Name" name="Lname"/>
-    </div>
-    <div>
-        <label for="gender">please select gender</label>
-        <select name="gender" id="gender">
-         <option value="m">male </option>
-         <option value="f">female </option>
-         <option value="o">others </option>
-        </select>
-    </div>
-    <div>
-        Do you agree all terms of servicre?
-        <input type="checkbox" id="tos_agree" name="tos_agree"/>
-        <label for="toss_agree">Yes I Agree</label>
-    </div>
-    <button>Regester</button>
-    </body>
-     </form>
+    <h3><i><b>Registration form</b></i></h3>
+    <form action="/action" method="post"> <!-- Added method attribute -->
+        <div>
+            <label for="Fname">Please enter your name</label> <!-- Corrected for attribute -->
+            <input type="text" id="Fname" placeholder="First Name" name="Fname"/>
+            <input type="text" id="Lname" placeholder="Last Name" name="Lname"/> <!-- Added id attribute -->
+        </div>
+        <div>
+            <label for="gender">Please select gender</label>
+            <select name="gender" id="gender">
+                <option value="m">male</option>
+                <option value="f">female</option>
+                <option value="o">others</option>
+            </select>
+        </div>
+        <div>
+            Do you agree to all terms of service?
+            <input type="checkbox" id="tos_agree" name="tos_agree"/>
+            <label for="tos_agree">Yes, I Agree</label> <!-- Corrected for attribute -->
+        </div>
+        <button type="submit">Register</button>
+    </form> <!-- Moved closing form tag here -->
 </body>
 </html>
