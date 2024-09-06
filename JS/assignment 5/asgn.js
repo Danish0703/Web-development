@@ -55,6 +55,7 @@ function longestName(country) {
 }
 
 longestName(country);
+
 let strr = "apnacollege";
 
 function countVowels(strr) {
@@ -67,7 +68,9 @@ function countVowels(strr) {
     return count;
 }
 
-countVowels(str);let start = 100;
+countVowels(str);
+
+let start = 100;
 let end = 200;
 
 function generateRandom(start, end) {
