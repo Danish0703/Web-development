@@ -20,14 +20,4 @@ const object = {
 };
 setTimeout(() => object.logMessage(), 1000);
 
-const fetchData = async () => {
-    try {
-        const response = await fetch('https://mddanish.unaux.com');
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
-        console.log('Error:', error);
-    }
-};
 
-fetchData();
