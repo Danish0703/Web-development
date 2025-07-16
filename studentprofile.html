@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f8fa;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: #e3e3e3;
+            padding: 10px 0;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        nav a {
+            color: #0078d4;
+            text-decoration: none;
+            margin: 0 8px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background: #e3e3e3;
+        }
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        fieldset {
+            border: 1px solid #0078d4;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        legend {
+            color: #0078d4;
+            font-weight: bold;
+        }
+        button {
+            background: #0078d4;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005fa3;
+        }
+        aside {
+            background: #e3e3e3;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        details {
+            margin-top: 10px;
+        }
+        img {
+            border-radius: 50%;
+            border: 2px solid #0078d4;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+            table, th, td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    
+    <header>
+        <center><h1 style="color:#0078d4;">Student Profile</h1>
+        <nav>
+            <a href="#info">Information</a> |
+            <a href="#education">Education</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+        </center>
+        <hr>
+    </header>
+    <main>
+        <section id="info">
+            <h2 style="color:#0078d4;">Student Information</h2>
+            <table align="center" cellpadding="10">
+                <tr>
+                    <td rowspan="4" align="center"></td>
+                        <img src="https://logowik.com/content/uploads/images/university-student6136.logowik.com.webp" alt="Student Photo" width="120">
+                        <br>
+                        <b>Mohammad Danish</b>
+                    </td>
+                    <td><b>Name:</b></td>
+                    <td>Danish</td>
+                </tr>
+                <tr>
+                    <td><b>Age:</b></td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td><b>Major:</b></td>
+                    <td>Information Technology</td>
+                </tr>
+                <tr>
+                    <td><b>Gender:</b></td>
+                    <td>Male</td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+        <section id="education">
+            <h2 style="color:#0078d4;">Education Details</h2>
+            <table border="1"  cellpadding="8">
+                <caption style="font-weight:bold;">Academic Records</caption>
+                <thead style="background-color:#e3e3e3;">
+                    <tr>
+                        <th>Year</th>
+                        <th>Course</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024</td>
+                        <td>Web Development</td>
+                        <td><b>A++</b></td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>Database Systems</td>
+                        <td><b>A</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+        <section id="contact">
+            <h2 style="color:#0078d4;">Contact Information</h2>
+            <table cellpadding="6">
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td><a href="mailto:160923737009@lords.ac.in">160923737009@lords.ac.in</a></td>
+                </tr>
+                <tr>
+                    <td><b>Phone:</b></td>
+                    <td><a href="tel:+91 9014368437">+91 9014368437</a></td>
+                </tr>
+                <tr>
+                    <td><b>Address:</b></td>
+                    <td>Shaik's jewel,p and t colony, SunCity, Hyderabad</td>
+                </tr>
+            </table>
+            <br>
+            <form onsubmit="showMessage(event)">
+                <fieldset>
+                    <legend>Send a Message</legend>
+                    <table>
+                        <tr>
+                            <td><label for="name">Your Name:</label></td>
+                            <td><input type="text" id="name" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Your Email:</label></td>
+                            <td><input type="email" id="email" name="email"></td>       
+                        </tr>
+                        <tr>
+                            <td><label for="message">Message:</label></td>
+                            <td><textarea id="message" name="message" rows="4" cols="30"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="right">
+                                <button type="submit">Send</button>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </section>
+        <hr>
+        <aside>
+            <h3 style="color:#0078d4;">Hobbies & Interests</h3>
+            <ol>
+                <li>Programming</li>
+                <li>Reading</li>
+                <li>Sports</li>
+            </ol>
+            <details>
+                <summary>More about Danish</summary>
+                <p>Danish is passionate about technology and enjoys learning new programming languages.</p>
+            </details>
+        </aside>
+    </main>
+    <center>
+        <h2 style="color:#0078d4;">Thank you for visiting!</h2>
+    <footer>
+        <hr>
+        <p>&copy; 2025 Student Profile Page</p>
+    </footer>
+    </center>
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            alert("Your message has been sent successfully!");
+        }
+    </script>
+</body>
+</html></section>
